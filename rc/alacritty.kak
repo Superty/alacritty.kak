@@ -6,7 +6,7 @@ provide-module alacritty %{
   }
 
   define-command alacritty-popup -params .. -shell-completion -docstring 'Open a new terminal as a popup' %{
-    alacritty --dimensions 80 23 --class 'Alacritty Popup' %arg{@}
+    alacritty -o window.dimensions.columns=100 -o window.dimensions.lines=40 --class 'Alacritty Popup' %arg{@}
   }
 
   # Conform to terminal as aliases
